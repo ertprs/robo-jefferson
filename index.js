@@ -774,7 +774,7 @@ scdl("https://m.soundcloud.com/abdul-muttaqin-701361735/lucid-dreams-gustixa-ft-
   
   
 
- * save audio file
+ *save audio file
  
 
 gtts.save(filepath, suara, function() {
