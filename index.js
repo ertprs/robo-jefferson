@@ -12,12 +12,12 @@ const menu = require("./lib/menu.js");
 const donate = require("./lib/donate.js");
 const info = require("./lib/info.js");
 //
-const BotName = 'ST4RZ BOT 🤖'; // Nama Bot Whatsapp
-const instagramlu = 'https://instagram.com/bintang_nur_pradana'; // Nama Instagramlu cok
-const whatsapplu = '0819-4698-3575'; // Nomor whatsapplu cok
-const kapanbotaktif = '24 Jam'; // Kapan bot lu aktif
-const grupch1 = 'https://chat.whatsapp.com/FsAlnxqz6y2BhCQi5ayCLG'; // OFFICIAL GRUP LU 1
-const grupch2 = 'https://chat.whatsapp.com/KLW3UlFfeaH36Ucm5zRfCz'; // OFFICIAL GRUP LU 2
+const BotName = 'Robo jefferson 🤖'; // Nome Bot Whatsapp
+const instagramlu = 'https://www.instagram.com/jeffersonla_/'; // Instagram do autor
+const whatsapplu = '+55 45 9-9833-1383'; // Numero autor Whatsapp
+const kapanbotaktif = '24 Jam'; // tempo de bot ativo
+const grupch1 = 'https://chat.whatsapp.com/1nSOPC5oRJgEhhCRQXTQLH'; // Grupo oficial
+const grupch2 = 'https://chat.whatsapp.com/1nSOPC5oRJgEhhCRQXTQLH'; // grupo 2
 //
 const
 {
@@ -93,8 +93,8 @@ for ( var i = 0; i < numArray.length; i++ ) {
 var str = numArray.join("");
 console.log(str)
 const group = await conn.groupCreate (nama, str)
-console.log ("created group with id: " + group.gid)
-conn.sendMessage(group.gid, "hello everyone", MessageType.extendedText) // say hello to everyone on the group
+console.log ("Grupo criado com id: " + group.gid)
+conn.sendMessage(group.gid, "Olá a todos", MessageType.extendedText) // say hello to everyone on the group
 
 }
 
@@ -125,7 +125,7 @@ conn.sendMessage(id, teks, MessageType.text)
 if (text.includes("#nulis")){
   const teks = text.replace(/#nulis /, "")
 axios.get(`https://st4rz.herokuapp.com/api/nulis?text=${teks}`).then((res) => {
-    let hasil = `Download sendiri ya hasilnya dibawah, soalnya kalo dikirim langsung hasilnya blur\n\n${res.data.result.data}`;
+    let hasil = `Baixe você mesmo os resultados, os resultados estão abaixo, porque se você enviá-los, os resultados ficam embaçados\n\n${res.data.result.data}`;
     conn.sendMessage(id, hasil ,MessageType.text);
 })
 }
@@ -133,7 +133,7 @@ axios.get(`https://st4rz.herokuapp.com/api/nulis?text=${teks}`).then((res) => {
 if (text.includes("#ytmp3")){
 const teks = text.replace(/#ytmp3 /, "")
 axios.get(`http://scrap.terhambar.com/yt?link=${teks}`).then((res) => {
-    let hasil = `Download sendiri melalui link dibawah ya, takut servernya down xixi..\n\nSize: ${res.data.filesize}\n\nLink: ${res.data.linkAudioOnly}`;
+    let hasil = `Baixe você mesmo através do link abaixo, infelizmente o servidor está fora do ar xixi .. \n\nSize: ${res.data.filesize}\n\nLink: ${res.data.linkAudioOnly}`;
     conn.sendMessage(id, hasil ,MessageType.text);
 })
 }
@@ -141,7 +141,7 @@ axios.get(`http://scrap.terhambar.com/yt?link=${teks}`).then((res) => {
 if (text.includes("#yt")){
 const teks = text.replace(/#yt /, "")
 axios.get(`http://scrap.terhambar.com/yt?link=${teks}`).then((res) => {
-    let hasil = `Download sendiri melalui link dibawah ya, takut servernya down xixi..\n\nSize: ${res.data.filesize}\n\nLink: ${res.data.linkVideo}`;
+    let hasil = `Baixe você mesmo através do link abaixo, infelizmente o servidor está fora do ar xixi ..\n\nSize: ${res.data.filesize}\n\nLink: ${res.data.linkVideo}`;
     conn.sendMessage(id, hasil ,MessageType.text);
 })
 }
@@ -149,7 +149,7 @@ axios.get(`http://scrap.terhambar.com/yt?link=${teks}`).then((res) => {
 if (text.includes("#fb")){
 const teks = text.replace(/#fb /, "")
 axios.get(`https://mhankbarbar.herokuapp.com/api/epbe?url=${teks}&apiKey=zFuV88pxcIiCWuYlwg57`).then((res) => {
-    let hasil = `Download sendiri melalui link dibawah ya, takut servernya down xixi..\n\nJudul: ${res.data.title}\n\nSize: ${res.data.filesize}\n\nLink: ${res.data.result}`;
+    let hasil = `Baixe você mesmo através do link abaixo, infelizmente o servidor está fora do ar xixi ..\n\nJudul: ${res.data.title}\n\nSize: ${res.data.filesize}\n\nLink: ${res.data.result}`;
     conn.sendMessage(id, hasil ,MessageType.text);
 })
 }
@@ -157,7 +157,7 @@ axios.get(`https://mhankbarbar.herokuapp.com/api/epbe?url=${teks}&apiKey=zFuV88p
 if (text.includes("#ig")){
 const teks = text.replace(/#ig /, "")
 axios.get(`https://st4rz.herokuapp.com/api/ig?url=${teks}`).then((res) => {
-    let hasil = `Download sendiri melalui link dibawah ya, takut servernya down xixi..\n\nLink: ${res.data.result}`;
+    let hasil = `Baixe você mesmo através do link abaixo, infelizmente o servidor está fora do ar xixi ..\n\nLink: ${res.data.result}`;
     conn.sendMessage(id, hasil ,MessageType.text);
 })
 }
@@ -165,7 +165,7 @@ axios.get(`https://st4rz.herokuapp.com/api/ig?url=${teks}`).then((res) => {
 if (text.includes("#twt")){
 const teks = text.replace(/#twt /, "")
 axios.get(`https://mhankbarbar.herokuapp.com/api/twit?url=${teks}&apiKey=zFuV88pxcIiCWuYlwg57`).then((res) => {
-    let hasil = `Download sendiri melalui link dibawah ya, takut servernya down xixi..\n\nJudul: ${res.data.title}\n\nSize: ${res.data.filesize}\n\nLink: ${res.data.result}`;
+    let hasil = `Baixe você mesmo através do link abaixo, infelizmente o servidor está fora do ar xixi..\n\nJudul: ${res.data.title}\n\nSize: ${res.data.filesize}\n\nLink: ${res.data.result}`;
     conn.sendMessage(id, hasil ,MessageType.text);
 })
 }
@@ -173,7 +173,7 @@ axios.get(`https://mhankbarbar.herokuapp.com/api/twit?url=${teks}&apiKey=zFuV88p
 if (text.includes("#wiki")){
 const teks = text.replace(/#wiki /, "")
 axios.get(`https://st4rz.herokuapp.com/api/wiki?q=${teks}`).then((res) => {
-    let hasil = `Menurut Wikipedia:\n\n${res.data.result}`;
+    let hasil = `De acordo com a Wikipedia:\n\n${res.data.result}`;
     conn.sendMessage(id, hasil ,MessageType.text);
 })
 }
@@ -189,30 +189,30 @@ var jam = date.getHours();
 var menit = date.getMinutes();
 var detik = date.getSeconds();
 switch(hari) {
- case 0: hari = "Minggu"; break;
- case 1: hari = "Senin"; break;
- case 2: hari = "Selasa"; break;
- case 3: hari = "Rabu"; break;
- case 4: hari = "Kamis"; break;
- case 5: hari = "Jum'at"; break;
- case 6: hari = "Sabtu"; break;
+ case 0: hari = "Domingo"; break;
+ case 1: hari = "Segunda-Feira"; break;
+ case 2: hari = "Terça_Feira"; break;
+ case 3: hari = "Quarta-Feira"; break;
+ case 4: hari = "Quinta-Feira"; break;
+ case 5: hari = "Sexta-Feira"; break;
+ case 6: hari = "sábado"; break;
 }
 switch(bulan) {
- case 0: bulan = "Januari"; break;
- case 1: bulan = "Februari"; break;
- case 2: bulan = "Maret"; break;
- case 3: bulan = "April"; break;
- case 4: bulan = "Mei"; break;
- case 5: bulan = "Juni"; break;
- case 6: bulan = "Juli"; break;
- case 7: bulan = "Agustus"; break;
- case 8: bulan = "September"; break;
- case 9: bulan = "Oktober"; break;
- case 10: bulan = "November"; break;
- case 11: bulan = "Desember"; break;
+ case 0: bulan = "Janeiro"; break;
+ case 1: bulan = "Fevereiro"; break;
+ case 2: bulan = "Março"; break;
+ case 3: bulan = "Abril"; break;
+ case 4: bulan = "Maio"; break;
+ case 5: bulan = "Junho"; break;
+ case 6: bulan = "Julho"; break;
+ case 7: bulan = "Agosto"; break;
+ case 8: bulan = "Stembro"; break;
+ case 9: bulan = "Outubro"; break;
+ case 10: bulan = "Novembro"; break;
+ case 11: bulan = "Dezembror"; break;
 }
-var tampilTanggal = "TANGGAL: " + hari + ", " + tanggal + " " + bulan + " " + tahun;
-var tampilWaktu = "JAM: " + jam + ":" + menit + ":" + detik;
+var tampilTanggal = "Hoje: " + hari + ", " + tanggal + " " + bulan + " " + tahun;
+var tampilWaktu = "Hora: " + jam + ":" + menit + ":" + detik;
 conn.sendMessage(id, menu.menu(id, BotName, corohelp, tampilTanggal, tampilWaktu, instagramlu, whatsapplu, kapanbotaktif, grupch1, grupch2) ,MessageType.text);
 }
 else if (text == '#quran'){
@@ -225,10 +225,10 @@ axios.get('https://api.banghasan.com/quran/format/json/acak').then((res) => {
 })
 }
 else if (text == 'assalamualaikum'){
-conn.sendMessage(id, '3aalaikumsalam, ada yang bisa saya bantu? kalo bingung ketik #help ya say..' ,MessageType.text);
+conn.sendMessage(id, '3aalaikumsalam, como posso ajudá-lo? se estiver confuso, digite #help yes say ..' ,MessageType.text);
 }
-else if (text == 'salam'){
-conn.sendMessage(id, 'Waalaikumsalam, ada yang bisa saya bantu? kalo bingung ketik #help ya say..' ,MessageType.text);
+else if (text == 'Ola'){
+conn.sendMessage(id, 'Waalaikumsalam, como posso ajudá-lo? se estiver confuso, digite #help yes say ..' ,MessageType.text);
 }
 else if (text == 'asalamualaikum'){
 conn.sendMessage(id, 'Waalaikumsalam, ada yang bisa saya bantu? kalo bingung ketik #help ya say..' ,MessageType.text);
@@ -325,30 +325,30 @@ var jam = date.getHours();
 var menit = date.getMinutes();
 var detik = date.getSeconds();
 switch(hari) {
- case 0: hari = "Minggu"; break;
- case 1: hari = "Senin"; break;
- case 2: hari = "Selasa"; break;
- case 3: hari = "Rabu"; break;
- case 4: hari = "Kamis"; break;
- case 5: hari = "Jum'at"; break;
- case 6: hari = "Sabtu"; break;
+ case 0: hari = "Domingo"; break;
+ case 1: hari = "Segunda-Feira"; break;
+ case 2: hari = "Terça-Feira"; break;
+ case 3: hari = "Quarta-Feira"; break;
+ case 4: hari = "Quinta-Feira"; break;
+ case 5: hari = "Sexta-Feira"; break;
+ case 6: hari = "Sabado"; break;
 }
 switch(bulan) {
- case 0: bulan = "Januari"; break;
- case 1: bulan = "Februari"; break;
- case 2: bulan = "Maret"; break;
- case 3: bulan = "April"; break;
- case 4: bulan = "Mei"; break;
- case 5: bulan = "Juni"; break;
- case 6: bulan = "Juli"; break;
- case 7: bulan = "Agustus"; break;
- case 8: bulan = "September"; break;
- case 9: bulan = "Oktober"; break;
- case 10: bulan = "November"; break;
- case 11: bulan = "Desember"; break;
+ case 0: bulan = "Janeiro"; break;
+ case 1: bulan = "Fevereiro"; break;
+ case 2: bulan = "Março"; break;
+ case 3: bulan = "Abril"; break;
+ case 4: bulan = "Maio"; break;
+ case 5: bulan = "Junho"; break;
+ case 6: bulan = "Julho"; break;
+ case 7: bulan = "Agosto"; break;
+ case 8: bulan = "Setembro"; break;
+ case 9: bulan = "Outro"; break;
+ case 10: bulan = "Novembro"; break;
+ case 11: bulan = "Dezembro"; break;
 }
-var tampilTanggal = "TANGGAL: " + hari + ", " + tanggal + " " + bulan + " " + tahun;
-var tampilWaktu = "JAM: " + jam + ":" + menit + ":" + detik;
+var tampilTanggal = "Hoje: " + hari + ", " + tanggal + " " + bulan + " " + tahun;
+var tampilWaktu = "Hora: " + jam + ":" + menit + ":" + detik;
 conn.sendMessage(id, donate.donate(id, BotName, corohelp, tampilTanggal, tampilWaktu, instagramlu, whatsapplu, kapanbotaktif, grupch1, grupch2) ,MessageType.text);
 }
 else if (text == '#donasi'){
@@ -362,30 +362,30 @@ var jam = date.getHours();
 var menit = date.getMinutes();
 var detik = date.getSeconds();
 switch(hari) {
- case 0: hari = "Minggu"; break;
- case 1: hari = "Senin"; break;
- case 2: hari = "Selasa"; break;
- case 3: hari = "Rabu"; break;
- case 4: hari = "Kamis"; break;
- case 5: hari = "Jum'at"; break;
- case 6: hari = "Sabtu"; break;
+ case 0: hari = "Domingo"; break;
+ case 1: hari = "Segunda-Feira"; break;
+ case 2: hari = "Terça-Feira"; break;
+ case 3: hari = "Quarta-Feira"; break;
+ case 4: hari = "Quinta-Feira"; break;
+ case 5: hari = "Sexta-Feira"; break;
+ case 6: hari = "Sabado"; break;
 }
 switch(bulan) {
- case 0: bulan = "Januari"; break;
- case 1: bulan = "Februari"; break;
- case 2: bulan = "Maret"; break;
- case 3: bulan = "April"; break;
- case 4: bulan = "Mei"; break;
- case 5: bulan = "Juni"; break;
- case 6: bulan = "Juli"; break;
- case 7: bulan = "Agustus"; break;
- case 8: bulan = "September"; break;
- case 9: bulan = "Oktober"; break;
- case 10: bulan = "November"; break;
- case 11: bulan = "Desember"; break;
+ case 0: bulan = "Janeiro"; break;
+ case 1: bulan = "Fevereiro"; break;
+ case 2: bulan = "Março"; break;
+ case 3: bulan = "Abril"; break;
+ case 4: bulan = "Maio"; break;
+ case 5: bulan = "Junho"; break;
+ case 6: bulan = "Julho"; break;
+ case 7: bulan = "Agosto"; break;
+ case 8: bulan = "Setembro"; break;
+ case 9: bulan = "Outro"; break;
+ case 10: bulan = "Novembro"; break;
+ case 11: bulan = "Dezembro"; break;
 }
-var tampilTanggal = "TANGGAL: " + hari + ", " + tanggal + " " + bulan + " " + tahun;
-var tampilWaktu = "JAM: " + jam + ":" + menit + ":" + detik;
+var tampilTanggal = "Hoje: " + hari + ", " + tanggal + " " + bulan + " " + tahun;
+var tampilWaktu = "Hora: " + jam + ":" + menit + ":" + detik;
 conn.sendMessage(id, donate.donate(id, BotName, corohelp, tampilTanggal, tampilWaktu, instagramlu, whatsapplu, kapanbotaktif, grupch1, grupch2) ,MessageType.text);
 }
 else if (text == '#DONATE'){
@@ -399,30 +399,30 @@ var jam = date.getHours();
 var menit = date.getMinutes();
 var detik = date.getSeconds();
 switch(hari) {
- case 0: hari = "Minggu"; break;
- case 1: hari = "Senin"; break;
- case 2: hari = "Selasa"; break;
- case 3: hari = "Rabu"; break;
- case 4: hari = "Kamis"; break;
- case 5: hari = "Jum'at"; break;
- case 6: hari = "Sabtu"; break;
+ case 0: hari = "Domingo"; break;
+ case 1: hari = "Segunda-Feira"; break;
+ case 2: hari = "Terça-Feira"; break;
+ case 3: hari = "Quarta-Feira"; break;
+ case 4: hari = "Quinta-Feira"; break;
+ case 5: hari = "Sexta-Feira"; break;
+ case 6: hari = "Sabado"; break;
 }
 switch(bulan) {
- case 0: bulan = "Januari"; break;
- case 1: bulan = "Februari"; break;
- case 2: bulan = "Maret"; break;
- case 3: bulan = "April"; break;
- case 4: bulan = "Mei"; break;
- case 5: bulan = "Juni"; break;
- case 6: bulan = "Juli"; break;
- case 7: bulan = "Agustus"; break;
- case 8: bulan = "September"; break;
- case 9: bulan = "Oktober"; break;
- case 10: bulan = "November"; break;
- case 11: bulan = "Desember"; break;
+ case 0: bulan = "Janeiro"; break;
+ case 1: bulan = "Fevereiro"; break;
+ case 2: bulan = "Março"; break;
+ case 3: bulan = "Abril"; break;
+ case 4: bulan = "Maio"; break;
+ case 5: bulan = "Junho"; break;
+ case 6: bulan = "Julho"; break;
+ case 7: bulan = "Agosto"; break;
+ case 8: bulan = "Setembro"; break;
+ case 9: bulan = "Outro"; break;
+ case 10: bulan = "Novembro"; break;
+ case 11: bulan = "Dezembro"; break;
 }
-var tampilTanggal = "TANGGAL: " + hari + ", " + tanggal + " " + bulan + " " + tahun;
-var tampilWaktu = "JAM: " + jam + ":" + menit + ":" + detik;
+var tampilTanggal = "Hoje: " + hari + ", " + tanggal + " " + bulan + " " + tahun;
+var tampilWaktu = "Hora: " + jam + ":" + menit + ":" + detik;
 conn.sendMessage(id, donate.donate(id, BotName, corohelp, tampilTanggal, tampilWaktu, instagramlu, whatsapplu, kapanbotaktif, grupch1, grupch2) ,MessageType.text);
 }
 else if (text == '#DONASI'){
@@ -436,30 +436,30 @@ var jam = date.getHours();
 var menit = date.getMinutes();
 var detik = date.getSeconds();
 switch(hari) {
- case 0: hari = "Minggu"; break;
- case 1: hari = "Senin"; break;
- case 2: hari = "Selasa"; break;
- case 3: hari = "Rabu"; break;
- case 4: hari = "Kamis"; break;
- case 5: hari = "Jum'at"; break;
- case 6: hari = "Sabtu"; break;
+ case 0: hari = "Domingo"; break;
+ case 1: hari = "Segunda-Feira"; break;
+ case 2: hari = "Terça-Feira"; break;
+ case 3: hari = "Quarta-Feira"; break;
+ case 4: hari = "Quinta-Feira"; break;
+ case 5: hari = "Sexta-Feira"; break;
+ case 6: hari = "Sabado"; break;
 }
 switch(bulan) {
- case 0: bulan = "Januari"; break;
- case 1: bulan = "Februari"; break;
- case 2: bulan = "Maret"; break;
- case 3: bulan = "April"; break;
- case 4: bulan = "Mei"; break;
- case 5: bulan = "Juni"; break;
- case 6: bulan = "Juli"; break;
- case 7: bulan = "Agustus"; break;
- case 8: bulan = "September"; break;
- case 9: bulan = "Oktober"; break;
- case 10: bulan = "November"; break;
- case 11: bulan = "Desember"; break;
+ case 0: bulan = "Janeiro"; break;
+ case 1: bulan = "Fevereiro"; break;
+ case 2: bulan = "Março"; break;
+ case 3: bulan = "Abril"; break;
+ case 4: bulan = "Maio"; break;
+ case 5: bulan = "Junho"; break;
+ case 6: bulan = "Julho"; break;
+ case 7: bulan = "Agosto"; break;
+ case 8: bulan = "Setembro"; break;
+ case 9: bulan = "Outro"; break;
+ case 10: bulan = "Novembro"; break;
+ case 11: bulan = "Dezembro"; break;
 }
-var tampilTanggal = "TANGGAL: " + hari + ", " + tanggal + " " + bulan + " " + tahun;
-var tampilWaktu = "JAM: " + jam + ":" + menit + ":" + detik;
+var tampilTanggal = "Hoje: " + hari + ", " + tanggal + " " + bulan + " " + tahun;
+var tampilWaktu = "Hora: " + jam + ":" + menit + ":" + detik;
 conn.sendMessage(id, donate.donate(id, BotName, corohelp, tampilTanggal, tampilWaktu, instagramlu, whatsapplu, kapanbotaktif, grupch1, grupch2) ,MessageType.text);
 }
 else if (text == '#info'){
@@ -473,42 +473,42 @@ var jam = date.getHours();
 var menit = date.getMinutes();
 var detik = date.getSeconds();
 switch(hari) {
- case 0: hari = "Minggu"; break;
- case 1: hari = "Senin"; break;
- case 2: hari = "Selasa"; break;
- case 3: hari = "Rabu"; break;
- case 4: hari = "Kamis"; break;
- case 5: hari = "Jum'at"; break;
- case 6: hari = "Sabtu"; break;
+ case 0: hari = "Domingo"; break;
+ case 1: hari = "Segunda-Feira"; break;
+ case 2: hari = "Terça-Feira"; break;
+ case 3: hari = "Quarta-Feira"; break;
+ case 4: hari = "Quinta-Feira"; break;
+ case 5: hari = "Sexta-Feira"; break;
+ case 6: hari = "Sabado"; break;
 }
 switch(bulan) {
- case 0: bulan = "Januari"; break;
- case 1: bulan = "Februari"; break;
- case 2: bulan = "Maret"; break;
- case 3: bulan = "April"; break;
- case 4: bulan = "Mei"; break;
- case 5: bulan = "Juni"; break;
- case 6: bulan = "Juli"; break;
- case 7: bulan = "Agustus"; break;
- case 8: bulan = "September"; break;
- case 9: bulan = "Oktober"; break;
- case 10: bulan = "November"; break;
- case 11: bulan = "Desember"; break;
+ case 0: bulan = "Janeiro"; break;
+ case 1: bulan = "Fevereiro"; break;
+ case 2: bulan = "Março"; break;
+ case 3: bulan = "Abril"; break;
+ case 4: bulan = "Maio"; break;
+ case 5: bulan = "Junho"; break;
+ case 6: bulan = "Julho"; break;
+ case 7: bulan = "Agosto"; break;
+ case 8: bulan = "Setembro"; break;
+ case 9: bulan = "Outro"; break;
+ case 10: bulan = "Novembro"; break;
+ case 11: bulan = "Dezembro"; break;
 }
-var tampilTanggal = "TANGGAL: " + hari + ", " + tanggal + " " + bulan + " " + tahun;
-var tampilWaktu = "JAM: " + jam + ":" + menit + ":" + detik;
+var tampilTanggal = "Hoje: " + hari + ", " + tanggal + " " + bulan + " " + tahun;
+var tampilWaktu = "Hora: " + jam + ":" + menit + ":" + detik;
 conn.sendMessage(id, info.info(id, BotName, corohelp, tampilTanggal, tampilWaktu, instagramlu, whatsapplu, kapanbotaktif, grupch1, grupch2) ,MessageType.text);
 }
 else if (text == '#ptl'){
-conn.sendMessage(id, 'kirim #ptl cewek/cowok\n\nContoh: #ptl cewek' ,MessageType.text);
+conn.sendMessage(id, 'Enviar #ptl menina/menino\n\nExemplo: #ptl menina' ,MessageType.text);
 }
    if (messageType == 'imageMessage')
    {
       let caption = imageMessage.caption.toLocaleLowerCase()
-      const buffer = await conn.downloadMediaMessage(m) // to decrypt & use as a buffer
+      const buffer = await conn.downloadMediaMessage(m) // para descriptografar e usar como um buffer
       if (caption == '#sticker')
       {
-         const stiker = await conn.downloadAndSaveMediaMessage(m) // to decrypt & save to file
+         const stiker = await conn.downloadAndSaveMediaMessage(m) // para descriptografar e salvar em arquivo
 
          const
          {
@@ -541,7 +541,10 @@ conn.sendMessage(id, 'kirim #ptl cewek/cowok\n\nContoh: #ptl cewek' ,MessageType
       }
 
    }
-/*   if (text.includes("#yt"))
+
+   //Liberando função youtube 
+
+  if (text.includes("#yt"))
    {
       const url = text.replace(/#yt/, "");
       const exec = require('child_process').exec;
@@ -662,7 +665,9 @@ conn.sendMessage(id, 'kirim #ptl cewek/cowok\n\nContoh: #ptl cewek' ,MessageType
             );
 
          });
-   }*/
+   }
+
+   //----------------------------------------------------------teste voice
 
    if (text.includes("#ptl cewek"))
    {
@@ -750,8 +755,9 @@ if (text.includes("#randomanime"))
     
     });
     }
+    //--------------------------------------------------VOICE
 
-/*if (text.includes("#scdl")){
+if (text.includes("#scdl")){
 const fs = require("fs");
 const scdl = require("./lib/scdl");
 scdl.setClientID("iZIs9mchVcX5lhVRyQGGAYlNPVldzAoX");
@@ -767,22 +773,22 @@ scdl("https://m.soundcloud.com/abdul-muttaqin-701361735/lucid-dreams-gustixa-ft-
   var filepath = 'mp3/bacot.wav';
   
   
-/*
- * save audio file
- */
 
-/*gtts.save(filepath, suara, function() {
+ * save audio file
+ 
+
+gtts.save(filepath, suara, function() {
   console.log(`${filepath} MP3 SAVED!`)
 });
-await new Promise(resolve => setTimeout(resolve, 500));*/
+await new Promise(resolve => setTimeout(resolve, 500));
 
-/*	if(suara.length > 200){ // check longness of text, because otherways google translate will give me a empty file
+if(suara.length > 200){ // check longness of text, because otherways google translate will give me a empty file
   msg.reply("Text kepanjangan bro!")
 }else{
 const buffer = fs.readFileSync(filepath)
 	conn.sendMessage(id , buffer , MessageType.audio);
 };
-}*/
+}
 
 
 
