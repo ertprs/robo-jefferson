@@ -669,7 +669,7 @@ conn.sendMessage(id, 'Enviar #ptl menina/menino\n\nExemplo: #ptl menina' ,Messag
 
    //----------------------------------------------------------teste voice
 
-   if (text.includes("#ptl cewek"))
+   /*if (text.includes("#ptl cewek"))
    {
     var items = ["ullzang girl", "cewe cantik", "hijab cantik", "korean girl"];
     var cewe = items[Math.floor(Math.random() * items.length)];
@@ -792,7 +792,7 @@ const buffer = fs.readFileSync(filepath)
 
 
 
-
+*/
 
 
    // end of file
