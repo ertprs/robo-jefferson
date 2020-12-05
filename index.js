@@ -603,10 +603,10 @@ conn.sendMessage(id, 'Enviar #ptl menina/menino\n\nExemplo: #ptl menina' ,Messag
          }
       });
 
-   }*/
+   }
 
 
-   /*if (text.includes("#nulis"))
+   if (text.includes("#nulis"))
    {
 
       const
